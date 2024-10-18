@@ -1,0 +1,228 @@
+version: "3.1"
+
+nlu:
+- intent: get_total_spent
+  examples: |
+    - What was the total amount I spent on [Amazon](supplier_name) last month?
+    - How much did I spend on [Walmart](supplier_name) in [January](fiscal_year)?
+
+- intent: get_purchase_details
+  examples: |
+    - What did I buy from [Target](supplier_name) in [February](fiscal_year)?
+    - Show me my purchases from [Best Buy](supplier_name) last week.
+    - What was the price of the [Laptop](item_name) I bought from [Amazon](supplier_name)?
+
+ # - What was the price of the USP bought from Pitney Bowes?
+
+Pitney Bowes
+- intent: get_creation_date
+  examples: |
+    - When was the purchase created with Purchase Order Number [PO12345](purchase_order_number)?
+    - Can you tell me the creation date for Requisition Number [REQ6789](requisition_number)?
+
+- intent: get_fiscal_year
+  examples: |
+    - Which fiscal year does Purchase Order Number [PO12345](purchase_order_number) belong to?
+    - What fiscal year is the LPA Number [LPA1122](lpa_number) associated with?
+
+- intent: get_lpa_number
+  examples: |
+    - What is the LPA Number for Purchase Order Number [PO12345](purchase_order_number)?
+    - Can you find the LPA Number for the requisition with Requisition Number [REQ6789](requisition_number)?
+
+- intent: get_po_number
+  examples: |
+    - What is the Purchase Order Number for the item I bought from [Amazon](supplier_name)?
+    - Show me the Purchase Order Number for the order with Supplier Code [SC9876](supplier_code).
+
+- intent: get_requisition_number
+  examples: |
+    - Can you find the Requisition Number for Purchase Order Number [PO3456](purchase_order_number)?
+    - What was the Requisition Number for the purchase from [Target](supplier_name)?
+
+- intent: get_acquisition_type
+  examples: |
+    - What was the Acquisition Type for Purchase Order Number [PO5678](purchase_order_number)?
+    - Can you tell me the Acquisition Type for LPA Number [LPA3344](lpa_number)?
+
+- intent: get_acquisition_method
+  examples: |
+    - What method was used for the acquisition with Purchase Order Number [PO9876](purchase_order_number)?
+    - How was the acquisition made for the order with Requisition Number [REQ1234](requisition_number)?
+
+- intent: get_department_name
+  examples: |
+    - Which department made the purchase with Purchase Order Number [PO1122](purchase_order_number)?
+    - What is the Department Name for Requisition Number [REQ9876](requisition_number)?
+
+- intent: get_supplier_code
+  examples: |
+    - What is the Supplier Code for the order placed with [Best Buy](supplier_name)?
+    - Can you give me the Supplier Code for Purchase Order Number [PO4455](purchase_order_number)?
+
+- intent: get_supplier_name
+  examples: |
+    - Which supplier was used for the purchase with Supplier Code [SC2233](supplier_code)?
+    - Can you tell me the Supplier Name for Purchase Order Number [PO5566](purchase_order_number)?
+
+- intent: check_calcard
+  examples: |
+    - Was the CalCard used for the purchase with Requisition Number [REQ8899](requisition_number)?
+    - Did I use the CalCard for the order with Purchase Order Number [PO6677](purchase_order_number)?
+
+- intent: get_item_name
+  examples: |
+    - What item did I purchase from [Amazon](supplier_name) last month?
+    - Show me the name of the item bought with Purchase Order Number [PO7890](purchase_order_number).
+
+- intent: get_item_description
+  examples: |
+    - Can you describe the item with Item Name [Laptop](item_name) bought from [Walmart](supplier_name)?
+    - What is the description of the item I purchased with Purchase Order Number [PO3322](purchase_order_number)?
+
+- intent: get_quantity
+  examples: |
+    - How many units did I order with Purchase Order Number [PO5544](purchase_order_number)?
+    - What quantity was purchased for Requisition Number [REQ9900](requisition_number)?
+
+- intent: get_unit_price
+  examples: |
+    - What was the unit price for the item with Purchase Order Number [PO1234](purchase_order_number)?
+    - Can you tell me the unit price for Requisition Number [REQ5678](requisition_number)?
+
+- intent: get_total_price
+  examples: |
+    - What was the total price of my order with Purchase Order Number [PO4321](purchase_order_number)?
+    - Show me the total price for the purchase from [Best Buy](supplier_name) in [March](fiscal_year).
+
+- intent: get_classification_code
+  examples: |
+    - What is the Classification Code for Purchase Order Number [PO12345](purchase_order_number)?
+    - Can you give me the Classification Code for Requisition Number [REQ6789](requisition_number)?
+
+- intent: get_normalized_unspsc
+  examples: |
+    - What is the Normalized UNSPSC for Item [Laptop](item_name)?
+    - Show me the UNSPSC for Purchase Order Number [PO2345](purchase_order_number).
+
+- intent: get_commodity_title
+  examples: |
+    - What is the Commodity Title for Purchase Order Number [PO3456](purchase_order_number)?
+    - Can you tell me the Commodity Title for the item with Requisition Number [REQ5678](requisition_number)?
+
+- intent: get_class
+  examples: |
+    - What is the Class for the item with Purchase Order Number [PO1122](purchase_order_number)?
+    - Show me the Class for the requisition with Requisition Number [REQ3344](requisition_number).
+
+- intent: get_class_title
+  examples: |
+    - Can you tell me the Class Title for the item with Purchase Order Number [PO6677](purchase_order_number)?
+    - What is the Class Title for Requisition Number [REQ9988](requisition_number)?
+
+- intent: get_family
+  examples: |
+    - What is the Family for the purchase with Purchase Order Number [PO4321](purchase_order_number)?
+    - Can you show me the Family for the item in Requisition Number [REQ7788](requisition_number)?
+
+- intent: get_family_title
+  examples: |
+    - What is the Family Title for the item in Purchase Order Number [PO9876](purchase_order_number)?
+    - Can you tell me the Family Title for Requisition Number [REQ1122](requisition_number)?
+
+- intent: get_segment
+  examples: |
+    - Show me the Segment for Purchase Order Number [PO2233](purchase_order_number).
+    - Can you tell me the Segment for the item in Requisition Number [REQ5566](requisition_number)?
+
+- intent: get_segment_title
+  examples: |
+    - What is the Segment Title for Purchase Order Number [PO3344](purchase_order_number)?
+    - Can you show me the Segment Title for the item in Requisition Number [REQ4455](requisition_number)?
+
+- intent: get_location
+  examples: |
+    - Where is the location for Purchase Order Number [PO7890](purchase_order_number)?
+    - What is the location of Requisition Number [REQ5567](requisition_number)?
+    - Show me the location for [Best Buy](supplier_name).
+
+
+# - intent: get_creation_date
+#   examples: |
+#     - When was the purchase created with Purchase Order Number [12345](Purchase Order Number)?
+#     - Can you tell me the creation date for Requisition Number [REQ6789](Requisition Number)?
+
+# - intent: get_fiscal_year
+#   examples: |
+#     - Which fiscal year does Purchase Order Number [12345](Purchase Order Number) belong to?
+#     - What fiscal year is the LPA Number [LPA1122](LPA Number) associated with?
+
+# - intent: get_lpa_number
+#   examples: |
+#     - What is the LPA Number for Purchase Order Number [12345](Purchase Order Number)?
+#     - Can you find the LPA Number for the requisition with Requisition Number [REQ6789](Requisition Number)?
+
+# - intent: get_po_number
+#   examples: |
+#     - What is the Purchase Order Number for the item I bought from [Amazon](Supplier Name)?
+#     - Show me the Purchase Order Number for the order with Supplier Code [SC9876](Supplier Code).
+
+# - intent: get_requisition_number
+#   examples: |
+#     - Can you find the Requisition Number for Purchase Order Number [PO3456](Purchase Order Number)?
+#     - What was the Requisition Number for the purchase from [Target](Supplier Name)?
+
+# - intent: get_acquisition_type
+#   examples: |
+#     - What was the Acquisition Type for Purchase Order Number [PO5678](Purchase Order Number)?
+#     - Can you tell me the Acquisition Type for LPA Number [LPA3344](LPA Number)?
+
+# - intent: get_acquisition_method
+#   examples: |
+#     - What method was used for the acquisition with Purchase Order Number [PO9876](Purchase Order Number)?
+#     - How was the acquisition made for the order with Requisition Number [REQ1234](Requisition Number)?
+
+# - intent: get_department_name
+#   examples: |
+#     - Which department made the purchase with Purchase Order Number [PO1122](Purchase Order Number)?
+#     - What is the Department Name for the Requisition Number [REQ9876](Requisition Number)?
+
+# - intent: get_supplier_code
+#   examples: |
+#     - What is the Supplier Code for the order placed with [Best Buy](Supplier Name)?
+#     - Can you give me the Supplier Code for Purchase Order Number [PO4455](Purchase Order Number)?
+
+# - intent: get_supplier_name
+#   examples: |
+#     - Which supplier was used for the purchase with Supplier Code [SC2233](Supplier Code)?
+#     - Can you tell me the Supplier Name for Purchase Order Number [PO5566](Purchase Order Number)?
+
+# - intent: check_calcard
+#   examples: |
+#     - Was the CalCard used for the purchase with Requisition Number [REQ8899](Requisition Number)?
+#     - Did I use the CalCard for the order with Purchase Order Number [PO6677](Purchase Order Number)?
+
+# - intent: get_item_name
+#   examples: |
+#     - What item did I purchase from [Amazon](Supplier Name) last month?
+#     - Show me the name of the item bought with Purchase Order Number [PO7890](Purchase Order Number).
+
+# - intent: get_item_description
+#   examples: |
+#     - Can you describe the item with Item Name [Laptop](Item Name) bought from [Walmart](Supplier Name)?
+#     - What is the description of the item I purchased with Purchase Order Number [PO3322](Purchase Order Number)?
+
+# - intent: get_quantity
+#   examples: |
+#     - How many units did I order with Purchase Order Number [PO5544](Purchase Order Number)?
+#     - What quantity was purchased for the Requisition Number [REQ9900](Requisition Number)?
+
+# - intent: get_unit_price
+#   examples: |
+#     - What was the unit price for the item with Purchase Order Number [PO1234](Purchase Order Number)?
+#     - Can you tell me the unit price for the Requisition Number [REQ5678](Requisition Number)?
+
+# - intent: get_total_price
+#   examples: |
+#     - What was the total price of my order with Purchase Order Number [PO4321](Purchase Order Number)?
+#     - Show me the total price for the purchase from [Best Buy](Supplier Name) in [March](time_range).

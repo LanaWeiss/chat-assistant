@@ -1,0 +1,143 @@
+version: "3.1"
+
+stories:
+
+- story: get total spent
+  steps:
+  - intent: get_total_spent
+  - action: action_get_total_spent
+
+- story: get purchase details
+  steps:
+  - intent: get_purchase_details
+  - action: action_get_purchase_details
+
+- story: get creation date
+  steps:
+  - intent: get_creation_date
+  - action: action_get_creation_date
+
+- story: get fiscal year
+  steps:
+  - intent: get_fiscal_year
+  - action: action_get_fiscal_year
+
+- story: get LPA number
+  steps:
+  - intent: get_lpa_number
+  - action: action_get_lpa_number
+
+- story: get purchase order number
+  steps:
+  - intent: get_po_number
+  - action: action_get_po_number
+
+- story: get requisition number
+  steps:
+  - intent: get_requisition_number
+  - action: action_get_requisition_number
+
+- story: get acquisition type
+  steps:
+  - intent: get_acquisition_type
+  - action: action_get_acquisition_type
+
+- story: get acquisition method
+  steps:
+  - intent: get_acquisition_method
+  - action: action_get_acquisition_method
+
+- story: get department name
+  steps:
+  - intent: get_department_name
+  - action: action_get_department_name
+
+- story: get supplier code
+  steps:
+  - intent: get_supplier_code
+  - action: action_get_supplier_code
+
+- story: get supplier name
+  steps:
+  - intent: get_supplier_name
+  - action: action_get_supplier_name
+
+- story: check calcard
+  steps:
+  - intent: check_calcard
+  - action: action_check_calcard
+
+- story: get item name
+  steps:
+  - intent: get_item_name
+  - action: action_get_item_name
+
+- story: get item description
+  steps:
+  - intent: get_item_description
+  - action: action_get_item_description
+
+- story: get quantity
+  steps:
+  - intent: get_quantity
+  - action: action_get_quantity
+
+- story: get unit price
+  steps:
+  - intent: get_unit_price
+  - action: action_get_unit_price
+
+- story: get total price
+  steps:
+  - intent: get_total_price
+  - action: action_get_total_price
+
+- story: get classification code
+  steps:
+  - intent: get_classification_code
+  - action: action_get_classification_code
+
+- story: get normalized unspsc
+  steps:
+  - intent: get_normalized_unspsc
+  - action: action_get_normalized_unspsc
+
+- story: get commodity title
+  steps:
+  - intent: get_commodity_title
+  - action: action_get_commodity_title
+
+- story: get class
+  steps:
+  - intent: get_class
+  - action: action_get_class
+
+- story: get class title
+  steps:
+  - intent: get_class_title
+  - action: action_get_class_title
+
+- story: get family
+  steps:
+  - intent: get_family
+  - action: action_get_family
+
+- story: get family title
+  steps:
+  - intent: get_family_title
+  - action: action_get_family_title
+
+- story: get segment
+  steps:
+  - intent: get_segment
+  - action: action_get_segment
+
+- story: get segment title
+  steps:
+  - intent: get_segment_title
+  - action: action_get_segment_title
+
+- story: get location
+  steps:
+  - intent: get_location
+  - action: action_get_location

@@ -1,0 +1,505 @@
+version: "3.1"
+
+intents:
+  - get_total_spent
+  - get_purchase_details
+  - get_creation_date
+  - get_fiscal_year
+  - get_lpa_number
+  - get_po_number
+  - get_requisition_number
+  - get_acquisition_type
+  - get_acquisition_method
+  - get_department_name
+  - get_supplier_code
+  - get_supplier_name
+  - check_calcard
+  - get_item_name
+  - get_item_description
+  - get_quantity
+  - get_unit_price
+  - get_total_price
+  - get_classification_code
+  - get_normalized_unspsc
+  - get_commodity_title
+  - get_class
+  - get_class_title
+  - get_family
+  - get_family_title
+  - get_segment
+  - get_segment_title
+  - get_location
+
+entities:
+  - item_name
+  - purchase_order_number
+  - requisition_number
+  - acquisition_type
+  - acquisition_method
+  - department_name
+  - supplier_code
+  - supplier_name
+  - calcard
+  - item_description
+  - quantity
+  - unit_price
+  - total_price
+  - creation_date
+  - fiscal_year
+  - lpa_number
+  - classification_code
+  - normalized_unspsc
+  - commodity_title
+  - class
+  - class_title
+  - family
+  - family_title
+  - segment
+  - segment_title
+  - location
+
+slots:
+  purchase_order_number:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: purchase_order_number
+  requisition_number:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: requisition_number
+  acquisition_type:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: acquisition_type
+  acquisition_method:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: acquisition_method
+  department_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: department_name
+  supplier_code:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: supplier_code
+  supplier_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: supplier_name
+  calcard:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: calcard
+  item_description:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: item_description
+  quantity:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: quantity
+  unit_price:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: unit_price
+  total_price:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: total_price
+  creation_date:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: creation_date
+  fiscal_year:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: fiscal_year
+  lpa_number:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: lpa_number
+  classification_code:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: classification_code
+  normalized_unspsc:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: normalized_unspsc
+  commodity_title:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: commodity_title
+  class:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: class
+  class_title:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: class_title
+  family:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: family
+  family_title:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: family_title
+  segment:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: segment
+  segment_title:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: segment_title
+  location:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: location
+
+
+actions:
+  - action_get_total_spent
+  - action_get_purchase_details
+  - action_get_creation_date
+  - action_get_fiscal_year
+  - action_get_lpa_number
+  - action_get_po_number
+  - action_get_requisition_number
+  - action_get_acquisition_type
+  - action_get_acquisition_method
+  - action_get_department_name
+  - action_get_supplier_code
+  - action_get_supplier_name
+  - action_check_calcard
+  - action_get_item_name
+  - action_get_item_description
+  - action_get_quantity
+  - action_get_unit_price
+  - action_get_total_price
+  - action_get_classification_code
+  - action_get_normalized_unspsc
+  - action_get_commodity_title
+  - action_get_class
+  - action_get_class_title
+  - action_get_family
+  - action_get_family_title
+  - action_get_segment
+  - action_get_segment_title
+  - action_get_location
+
+responses:
+  utter_total_spent:
+  - text: "You spent a total of ${total_spent} on {supplier_name} in {fiscal_year}."
+
+  utter_purchase_details:
+  - text: "In {time_range}, you bought {items} from {supplier_name}."
+
+  utter_creation_date:
+  - text: "The creation date for Purchase Order Number {purchase_order_number} is {creation_date}."
+
+  utter_fiscal_year:
+  - text: "The fiscal year for Purchase Order Number {purchase_order_number} is {fiscal_year}."
+
+  utter_lpa_number:
+  - text: "The LPA Number for Purchase Order Number {purchase_order_number} is {lpa_number}."
+
+  utter_po_number:
+  - text: "The Purchase Order Number is {purchase_order_number}."
+
+  utter_requisition_number:
+  - text: "The Requisition Number is {requisition_number}."
+
+  utter_acquisition_type:
+  - text: "The Acquisition Type for Purchase Order Number {purchase_order_number} is {acquisition_type}."
+
+  utter_acquisition_method:
+  - text: "The Acquisition Method for Purchase Order Number {purchase_order_number} is {acquisition_method}."
+
+  utter_department_name:
+  - text: "The purchase was made by the {department_name} department."
+
+  utter_supplier_code:
+  - text: "The Supplier Code is {supplier_code}."
+
+  utter_supplier_name:
+  - text: "The supplier for Purchase Order Number {purchase_order_number} is {supplier_name}."
+
+  utter_check_calcard:
+  - text: "The CalCard {calcard} used for this purchase."
+
+  utter_item_name:
+  - text: "The item purchased is {item_name}."
+
+  utter_item_description:
+  - text: "The description of the item is {item_description}."
+
+  utter_quantity:
+  - text: "The quantity purchased is {quantity}."
+
+  utter_unit_price:
+  - text: "The unit price of the item is ${unit_price}."
+
+  utter_total_price:
+  - text: "The total price of the purchase is ${total_price}."
+  utter_classification_code:
+  - text: "The Classification Code for Purchase Order Number {purchase_order_number} is {classification_code}."
+
+  utter_normalized_unspsc:
+  - text: "The Normalized UNSPSC for Item {item_name} is {normalized_unspsc}."
+
+  utter_commodity_title:
+  - text: "The Commodity Title for Purchase Order Number {purchase_order_number} is {commodity_title}."
+
+  utter_class:
+  - text: "The Class for Purchase Order Number {purchase_order_number} is {class}."
+
+  utter_class_title:
+  - text: "The Class Title for Purchase Order Number {purchase_order_number} is {class_title}."
+
+  utter_family:
+  - text: "The Family for Purchase Order Number {purchase_order_number} is {family}."
+
+  utter_family_title:
+  - text: "The Family Title for Purchase Order Number {purchase_order_number} is {family_title}."
+
+  utter_segment:
+  - text: "The Segment for Purchase Order Number {purchase_order_number} is {segment}."
+
+  utter_segment_title:
+  - text: "The Segment Title for Purchase Order Number {purchase_order_number} is {segment_title}."
+
+  utter_location:
+  - text: "The location for Purchase Order Number {purchase_order_number} is {location}."
+
+
+
+# intents:
+#   - get_total_spent
+#   - get_purchase_details
+#   - get_creation_date
+#   - get_fiscal_year
+#   - get_lpa_number
+#   - get_po_number
+#   - get_requisition_number
+#   - get_acquisition_type
+#   - get_acquisition_method
+#   - get_department_name
+#   - get_supplier_code
+#   - get_supplier_name
+#   - check_calcard
+#   - get_item_name
+#   - get_item_description
+#   - get_quantity
+#   - get_unit_price
+#   - get_total_price
+
+# entities:
+#   - provider
+#   - time_range
+#   - item_name
+#   - purchase_order_number
+#   - requisition_number
+#   - acquisition_type
+#   - acquisition_method
+#   - department_name
+#   - supplier_code
+#   - supplier_name
+#   - calcard
+#   - item_description
+#   - quantity
+#   - unit_price
+#   - total_price
+#   - creation_date
+#   - fiscal_year
+#   - lpa_number
+
+# slots:
+#   provider:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: provider
+#   time_range:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: time_range
+#   purchase_order_number:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: purchase_order_number
+#   requisition_number:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: requisition_number
+#   acquisition_type:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: acquisition_type
+#   acquisition_method:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: acquisition_method
+#   department_name:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: department_name
+#   supplier_code:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: supplier_code
+#   supplier_name:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: supplier_name
+#   calcard:
+#     type: bool
+#     mappings:
+#       - type: from_entity
+#         entity: calcard
+#   item_description:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: item_description
+#   quantity:
+#     type: float
+#     mappings:
+#       - type: from_entity
+#         entity: quantity
+#   unit_price:
+#     type: float
+#     mappings:
+#       - type: from_entity
+#         entity: unit_price
+#   total_price:
+#     type: float
+#     mappings:
+#       - type: from_entity
+#         entity: total_price
+#   creation_date:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: creation_date
+#   fiscal_year:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: fiscal_year
+#   lpa_number:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: lpa_number
+
+# actions:
+#   - action_get_total_spent
+#   - action_get_purchase_details
+#   - action_get_creation_date
+#   - action_get_fiscal_year
+#   - action_get_lpa_number
+#   - action_get_po_number
+#   - action_get_requisition_number
+#   - action_get_acquisition_type
+#   - action_get_acquisition_method
+#   - action_get_department_name
+#   - action_get_supplier_code
+#   - action_get_supplier_name
+#   - action_check_calcard
+#   - action_get_item_name
+#   - action_get_item_description
+#   - action_get_quantity
+#   - action_get_unit_price
+#   - action_get_total_price
+
+# responses:
+#   utter_total_spent:
+#   - text: "You spent a total of ${total_spent} on {provider} in {time_range}."
+
+#   utter_purchase_details:
+#   - text: "In {time_range}, you bought {items} from {provider}."
+
+#   utter_creation_date:
+#   - text: "The creation date for Purchase Order Number {purchase_order_number} is {creation_date}."
+
+#   utter_fiscal_year:
+#   - text: "The fiscal year for Purchase Order Number {purchase_order_number} is {fiscal_year}."
+
+#   utter_lpa_number:
+#   - text: "The LPA Number for Purchase Order Number {purchase_order_number} is {lpa_number}."
+
+#   utter_po_number:
+#   - text: "The Purchase Order Number is {purchase_order_number}."
+
+#   utter_requisition_number:
+#   - text: "The Requisition Number is {requisition_number}."
+
+#   utter_acquisition_type:
+#   - text: "The Acquisition Type for Purchase Order Number {purchase_order_number} is {acquisition_type}."
+
+#   utter_acquisition_method:
+#   - text: "The Acquisition Method for Purchase Order Number {purchase_order_number} is {acquisition_method}."
+
+#   utter_department_name:
+#   - text: "The purchase was made by the {department_name} department."
+
+#   utter_supplier_code:
+#   - text: "The Supplier Code is {supplier_code}."
+
+#   utter_supplier_name:
+#   - text: "The supplier for Purchase Order Number {purchase_order_number} is {supplier_name}."
+
+#   utter_check_calcard:
+#   - text: "The CalCard {calcard} used for this purchase."
+
+#   utter_item_name:
+#   - text: "The item purchased is {item_name}."
+
+#   utter_item_description:
+#   - text: "The description of the item is {item_description}."
+
+#   utter_quantity:
+#   - text: "The quantity purchased is {quantity}."
+
+#   utter_unit_price:
+#   - text: "The unit price of the item is ${unit_price}."
+
+#   utter_total_price:
+#   - text: "The total price of the purchase is ${total_price}."
