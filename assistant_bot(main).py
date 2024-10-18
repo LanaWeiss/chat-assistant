@@ -16,7 +16,7 @@ Original file is located at
 import pymongo
 
 # Connect to MongoDB
-client = pymongo.MongoClient("mongodb+srv://lanaweiss02:whatever.ittakes@cluster0.loap7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+client = pymongo.MongoClient("mongodb+srv://*********:*********@cluster0.loap7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 db = client["purchase_history"]
 collection = db["purchase"]
 
