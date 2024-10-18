@@ -5,7 +5,7 @@ from rasa_sdk.executor import CollectingDispatcher
 import pymongo
 
 # Replace with your MongoDB connection details
-client = pymongo.MongoClient("mongodb+srv://lanaweiss02:whatever.ittakes@cluster0.loap7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+client = pymongo.MongoClient("mongodblink")
 db = client["purchase_history"]
 collection = db["purchases"]
 
